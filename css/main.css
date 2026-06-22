@@ -34,16 +34,6 @@ a {
     color: #FF7601;
 }
 
-.image-backdrop {
-    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent black */
-    backdrop-filter: blur(1px); /* blur the background image */
-    -webkit-backdrop-filter: blur(1px); /* Safari support */
-    padding: 2rem;
-    border-radius: 0.5rem;
-    width: 90%;
-    margin: 0 auto;
-}
-
 
 #loading {
     position: absolute;
@@ -108,4 +98,58 @@ iframe.storymap-full-screen, iframe.eb-full-screen{
     color: #FFF8F1;
     background-color: #FF7601;
     border-color: #FF7601;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;      /* prevents accidental horizontal overflow */
+}
+
+.hero-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+.image-backdrop {
+    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent black */
+    backdrop-filter: blur(1px); /* blur the background image */
+    -webkit-backdrop-filter: blur(1px); /* Safari support */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 576px) {
+
+    .hero-image {
+        height: 600px;   /* give more room for wrapped text */
+    }
+
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .image-backdrop {
+        padding: 1rem;
+        width: 92%;
+    }
 }
