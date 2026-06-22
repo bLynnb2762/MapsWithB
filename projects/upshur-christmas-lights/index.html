@@ -20,9 +20,17 @@
     </header>
 </div>
 
-<iframe src="https://storymaps.arcgis.com/stories/aa8b4992a97b4f10981fcc343b790aa0"
-        allowfullscreen allow="geolocation"></iframe>
+<div id="loading">
+    <div class="spinner-border spinner"></div>
+    <p class="mt-2">Loading StoryMap...</p>
+</div>
 
+<iframe class="storymap-full-screen"
+    id="storymap-frame"
+    src="https://storymaps.arcgis.com/stories/aa8b4992a97b4f10981fcc343b790aa0"
+    allowfullscreen allow="geolocation"
+    onload="storyLoaded()">
+</iframe>
 
 <footer class="d-flex justify-content-center align-items-center fixed-bottom"
         style="height: 30px; z-index: 2;">
