@@ -62,7 +62,7 @@ a {
     z-index: 1000;
 }
 
-iframe.storymap-full-screen {
+iframe.storymap-full-screen, iframe.eb-full-screen{
     position: absolute;
     top: 70px; /* adjust based on header height */
     left: 0;
