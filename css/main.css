@@ -1,0 +1,116 @@
+.courier-prime-regular {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.courier-prime-bold {
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.courier-prime-regular-italic {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.courier-prime-bold-italic {
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Courier Prime", monospace;
+    color: #1F3A5F
+}
+
+h2, h3, h4, h5, h6 {
+    color: #1F3A5F;
+}
+
+body {
+    background-color: #FFF8F1;
+}
+
+a {
+    color: #FF7601;
+}
+
+.image-backdrop {
+    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent black */
+    backdrop-filter: blur(1px); /* blur the background image */
+    -webkit-backdrop-filter: blur(1px); /* Safari support */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+#loading {
+    position: absolute;
+
+    top: 70px;      /* height of header */
+    bottom: 30px;   /* height of footer */
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
+
+    background: #FFF8F1;       /* optional */
+    z-index: 1000;
+}
+
+iframe.storymap-full-screen {
+    position: absolute;
+    top: 70px; /* adjust based on header height */
+    left: 0;
+    border: none;
+    width: 100vw;
+    height: calc(100vh - 100px); /* subtract header and footer height */
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #FFF8F1;
+    border-top: 5px solid #FF7601;
+    color: #FF7601;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.btn-primary {
+    color: #FFF8F1;
+    background-color: #FF7601;
+    border-color: #FF7601;
+}
+
+.btn-primary:hover {
+    color: #FF7601;
+    background-color: #FFF8F1;
+    border-color: #FF7601;
+}
+
+.btn-outline-primary {
+    color: #FF7601;
+    border-color: #FF7601;
+}
+
+.btn-outline-primary:hover {
+    color: #FFF8F1;
+    background-color: #FF7601;
+    border-color: #FF7601;
+}
