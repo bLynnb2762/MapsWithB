@@ -1,25 +1,6 @@
-.courier-prime-regular {
-    font-family: "Courier Prime", monospace;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.courier-prime-bold {
-    font-family: "Courier Prime", monospace;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.courier-prime-regular-italic {
-    font-family: "Courier Prime", monospace;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.courier-prime-bold-italic {
-    font-family: "Courier Prime", monospace;
-    font-weight: 700;
-    font-style: italic;
+html, body {
+    min-height: 100vh;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,11 +8,25 @@ h1, h2, h3, h4, h5, h6 {
     color: #1F3A5F
 }
 
-h2, h3, h4, h5, h6 {
-    color: #1F3A5F;
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #FFF8F1;
 }
 
