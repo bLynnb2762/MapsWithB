@@ -1,3 +1,4 @@
+/*Apply to full page*/
 html, body {
     min-height: 100vh;
     font-size: 16px;
@@ -8,109 +9,59 @@ html {
     scrollbar-gutter: stable;
 }
 
-.header-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Courier Prime", monospace;
-    color: #1F3A5F
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    font-style: normal;
-}
-
-h2 {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: 300;
-}
-
 body {
     display: flex;
     flex-direction: column;
     background-color: #FFF8F1;
 }
 
-a {
-    color: #FF7601;
-}
-
-
-#loading {
-    position: absolute;
-
-    top: 70px;      /* height of header */
-    bottom: 30px;   /* height of footer */
-    left: 0;
-    right: 0;
-
+/*Apply to header*/
+.header-top {
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertical center */
-    align-items: center;     /* horizontal center */
-
-    background: #FFF8F1;       /* optional */
-    z-index: 1000;
+    justify-content: center;
+    align-items: center;
 }
 
-iframe.storymap-full-screen, iframe.eb-full-screen{
+.site-header {
+    position: relative;
+    z-index: 10;
+}
+
+.project-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+}
+
+.project-menu-button {
+    display: none;
+}
+
+.project-nav {
     position: absolute;
-    top: 70px; /* adjust based on header height */
-    left: 0;
-    border: none;
-    width: 100vw;
-    height: calc(100vh - 100px); /* subtract header and footer height */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #FFF8F1;
-    border-top: 5px solid #FF7601;
-    color: #FF7601;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 0 auto 10px;
+/*Apply to logo*/
+.logo-link {
+    margin-left: 0;
 }
 
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+.logo {
+    max-height: 100px;
+    width: auto;
 }
 
-.btn-primary {
-    color: #FFF8F1;
-    background-color: #FF7601;
-    border-color: #FF7601;
+/*When viewing on a larger screen, show the nav bar*/
+@media (min-width: 577px) {
+    .project-nav.collapse {
+        display: block !important;
+    }
 }
 
-.btn-primary:hover {
-    color: #FF7601;
-    background-color: #FFF8F1;
-    border-color: #FF7601;
-}
-
-.btn-outline-primary {
-    color: #FF7601;
-    border-color: #FF7601;
-}
-
-.btn-outline-primary:hover {
-    color: #FFF8F1;
-    background-color: #FF7601;
-    border-color: #FF7601;
-}
-
+/*Apply to hero image*/
 .hero {
     position: relative;
     overflow: hidden;      /* prevents accidental horizontal overflow */
@@ -146,8 +97,103 @@ iframe.storymap-full-screen, iframe.eb-full-screen{
     box-sizing: border-box;
 }
 
-@media (max-width: 576px) {
+/*Apply to headings*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Courier Prime", monospace;
+    color: #1F3A5F;
+    font-style: normal;
+}
 
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/*Apply to links*/
+a {
+    color: #FF7601;
+}
+
+/*Apply to loading screen*/
+#loading {
+    position: absolute;
+
+    top: 100px;      /* height of header */
+    bottom: 30px;   /* height of footer */
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
+
+    background: #FFF8F1;       /* optional */
+    z-index: 1000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #FFF8F1;
+    border-top: 5px solid #FF7601;
+    color: #FF7601;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/*Apply to StoryMap and Experience Builder iframes*/
+iframe.storymap-full-screen, iframe.eb-full-screen{
+    position: absolute;
+    top: 100px; /* adjust based on header height */
+    left: 0;
+    border: none;
+    width: 100%;
+    height: calc(100vh - 130px); /* subtract header and footer height */
+}
+
+/*Apply to buttons*/
+.btn-primary {
+    color: #FFF8F1;
+    background-color: #FF7601;
+    border-color: #FF7601;
+}
+
+.btn-primary:hover {
+    color: #FF7601;
+    background-color: #FFF8F1;
+    border-color: #FF7601;
+}
+
+.btn-outline-primary {
+    color: #FF7601;
+    border-color: #FF7601;
+}
+
+.btn-outline-primary:hover {
+    color: #FFF8F1;
+    background-color: #FF7601;
+    border-color: #FF7601;
+}
+
+/*Formatting for mobile*/
+@media (max-width: 576px) {
     .hero-image {
         height: 600px;   /* give more room for wrapped text */
     }
@@ -155,12 +201,59 @@ iframe.storymap-full-screen, iframe.eb-full-screen{
     .hero h2 {
         font-size: 1.75rem;
     }
-}
 
-
-@media (max-width: 576px) {
     .image-backdrop {
         padding: 1rem;
         width: 92%;
+    }
+
+    .project-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .logo {
+        max-height: 60px;
+    }
+
+    .project-menu-button {
+        display: block;
+        border: 1px solid #FF7601;
+        border-radius: 0.5rem;
+        color: #FF7601;
+        background-color: #FFF8F1;
+        font-size: 1.5rem;
+        line-height: 1;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .project-nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        transform: none;
+        background-color: #FFF8F1;
+        padding: 0.5rem 0;
+        z-index: 20;
+    }
+
+    .project-nav .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #loading {
+        top: 70px;
+    }
+
+    iframe.storymap-full-screen,
+    iframe.eb-full-screen {
+        top: 70px;
+        height: calc(100vh - 100px); /* 70px header + 30px footer */
     }
 }
